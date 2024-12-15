@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html>
+ <head> 
+<title>Wachtwoordbeveiliging</title> 
+<script type="text/javascript">
+ function checkPassword() { 
+// 
+var validPasswords = ["INSTAGRAM", "TIKTOK", "FACEBOOK", "SNAPCHAT", "TWITCH", "YOUTUBE"];
+var userInput = document.getElementById("password").value.toUpperCase();
+
+if (validPasswords.includes(userInput)) {
+    alert("Access Granted");
+    window.location.href = "http://127.0.0.1:5500/5.html"
+} else {
+    alert("Access Denied");
+} } 
+
+  </script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    input {
+        padding: 10px;
+        font-size: 16px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+
+</head>
+<body>
+  <h1>REBUS</h1> 
+<p>FILL IN YOUR SECRET PASSWORD YOU GOT FROM THE REBUS TO GET ACCESS:</p>
+<input type="password" id="password" /> 
+<button onclick="checkPassword()">SUBMIT</button> 
+</body> 
+</html>
+
+
